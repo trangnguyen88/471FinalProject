@@ -41,6 +41,7 @@ if len(sys.argv) < 2:
 serverPort=int(sys.argv[1])
 
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+serverSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 print ('Socket created')
 
 #bind socket to host and port
@@ -60,7 +61,7 @@ print ('Socket now listening')
 while 1:
     #wait to accept a connection - blocking call
     conn, addr = serverSocket.accept()
-    print ('Connected with ' + addr + '@' + serverPort)
+    print ('Connected with ' , addr , '@' , serverPort)
     
 
 
