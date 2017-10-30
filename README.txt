@@ -12,6 +12,7 @@
 
 
 + How to execute this program:
+	In my case, I'm using Ubuntu terminal and python 3.6
 	 Steps to execute:
 		1/ On a terminal, navigate to where serv.py is
 		2/ Type "python serv.py <port_number>" to run the server
