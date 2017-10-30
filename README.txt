@@ -14,12 +14,13 @@
 + How to execute this program:
 	In my case, I'm using Ubuntu terminal and python 3.6
 	 Steps to execute:
-		1/ On a terminal, navigate to where serv.py is
-		2/ Type "python serv.py <port_number>" to run the server
-		   e.g. $ python serv.py 1234
-		3/ On a separate terminal, navigate to where cli.py is
-		4/ Type "python cli.py <server_machine> <port_number>" to run the client
-		   e.g. $ python cli.py ecs.fullerton.edu 1234
+		1/ On a terminal, navigate to where server.py is
+		2/ Type "python server.py <port_number>" to run the server
+		  	 e.g. $ python server.py 1234
+		3/ On a separate terminal, navigate to where client.py is
+		4/ Type "python client.py <server_machine> <port_number>" to run the client
+		   To test on the same computer, use $ python client.py localhost 1234
+		  	 e.g. $ python client.py ecs.fullerton.edu 1234
 		5/ Start using the program
 
 
