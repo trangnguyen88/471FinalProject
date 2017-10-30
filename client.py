@@ -50,14 +50,14 @@ def recvAll(sock, numBytes):
 	
 	return recvBuff
 
-def createSocket():
+def createSocket(portNumb):
 	import socket
 	#create an INET, STREAMing socket
 	clientSocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 	#bind the socket to a port
-	clientSocket.connect(serverName,clientSocket.getsockname()[1])
-	print("Connected to port #:", clientSocket.getsockname()[1])
+	clientSocket.connect((serverName,portNumb))
+	print("Connected to port #:",portNumb)
 
 	return clientSocket
 
@@ -136,6 +136,6 @@ if len(sys.argv) < 3:
 serverName=sys.argv[1]
 serverPort=int(sys.argv[2])
 
-clientSocket= createSocket()
+clientSocket= createSocket(serverPort)
 
 
