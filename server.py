@@ -34,7 +34,7 @@ request_queue=10
 #							MAIN PROGRAM
 # *******************************************************************
 
-#if client command line has 3 args. For ex: python server.py 1234
+#if command line has 3 args. For ex: python server.py 1234
 if len(sys.argv) < 2:
 	print ("python " + sys.argv[0]+"<port_number>")
 
